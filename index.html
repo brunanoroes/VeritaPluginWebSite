@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeritaPlugin — Detecte Golpes no Facebook</title>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__brand">
+        <img src="assets/icon.png" alt="VeritaPlugin logo" class="navbar__logo" />
+        <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
+      </a>
+      <nav class="navbar__links">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#categorias">O que detecta</a>
+        <a href="#instalacao">Instalação</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════ HERO ════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__badge">Extensão do Chrome · TCC 2025</p>
+        <h1 class="hero__title">
+          Detecte golpes no Facebook<br />
+          <span class="highlight-green">antes</span> que te enganem
+        </h1>
+        <p class="hero__sub">
+          O <strong><span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span></strong>
+          usa inteligência artificial para analisar publicações suspeitas e te alertar
+          com explicação e base legal em segundos.
+        </p>
+        <div class="hero__ctas">
+          <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            Baixar no GitHub
+          </a>
+          <a href="#instalacao" class="btn btn--ghost">Ver como instalar</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__shield-wrap">
+          <img src="assets/icon.png" alt="VeritaPlugin" class="hero__shield" />
+        </div>
+      </div>
+    </div>
+    <div class="hero__gradient"></div>
+  </section>
+
+  <!-- ══════════════════════════ COMO FUNCIONA ══════════════════════════ -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <h2 class="section__title">Como funciona</h2>
+      <p class="section__sub">Da suspeita à análise em segundos, sem sair do Facebook</p>
+      <div class="flow">
+        <div class="flow__step">
+          <div class="flow__icon">👆</div>
+          <div class="flow__label">Clique em<br />"Analisar Post"</div>
+        </div>
+        <div class="flow__arrow">→</div>
+        <div class="flow__step">
+          <div class="flow__icon">🖱️</div>
+          <div class="flow__label">Selecione a<br />publicação</div>
+        </div>
+        <div class="flow__arrow">→</div>
+        <div class="flow__step">
+          <div class="flow__icon">🤖</div>
+          <div class="flow__label">BERTimbau<br />classifica</div>
+        </div>
+        <div class="flow__arrow">→</div>
+        <div class="flow__step">
+          <div class="flow__icon">⚖️</div>
+          <div class="flow__label">RAG jurídico<br />consulta as leis</div>
+        </div>
+        <div class="flow__arrow">→</div>
+        <div class="flow__step">
+          <div class="flow__icon">📋</div>
+          <div class="flow__label">Resultado com<br />base legal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ O QUE DETECTA ══════════════════════════ -->
+  <section class="section section--alt" id="categorias">
+    <div class="container">
+      <h2 class="section__title">O que o VeritaPlugin detecta</h2>
+      <p class="section__sub">Seis categorias cobertas pelo modelo treinado</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">💰</div>
+          <h3 class="card__title">Golpes Financeiros</h3>
+          <p class="card__desc">Promessas falsas de dinheiro fácil, prêmios ou rendimentos absurdos.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">📰</div>
+          <h3 class="card__title">Desinformação Digital</h3>
+          <p class="card__desc">Notícias falsas criadas com fins maliciosos para enganar e manipular.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🛒</div>
+          <h3 class="card__title">Lojas Virtuais Falsas</h3>
+          <p class="card__desc">E-commerces fraudulentos que cobram sem entregar produtos.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🎣</div>
+          <h3 class="card__title">Phishing</h3>
+          <p class="card__desc">Coleta indevida de dados pessoais, senhas e informações bancárias.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">💔</div>
+          <h3 class="card__title">Golpes de Relacionamento</h3>
+          <p class="card__desc">Manipulação emocional para obter dinheiro ou dados da vítima.</p>
+        </div>
+        <div class="card card--safe">
+          <div class="card__icon">✅</div>
+          <h3 class="card__title">Seguro</h3>
+          <p class="card__desc">Publicação sem indícios de golpe detectados pelo modelo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ INSTALAÇÃO ══════════════════════════ -->
+  <section class="section" id="instalacao">
+    <div class="container">
+      <h2 class="section__title">Instalação</h2>
+      <p class="section__sub">Três passos e o plugin estará pronto no seu navegador</p>
+
+      <div class="steps">
+
+        <!-- STEP 1 -->
+        <div class="step">
+          <div class="step__number">1</div>
+          <div class="step__content">
+            <h3 class="step__title">Baixe o projeto</h3>
+            <p class="step__desc">
+              Acesse o repositório no GitHub e baixe o projeto como ZIP ou clone pelo terminal.
+              Extraia em uma pasta que você vá lembrar.
+            </p>
+            <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              Abrir no GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step">
+          <div class="step__number">2</div>
+          <div class="step__content">
+            <h3 class="step__title">Baixe o modelo BERTimbau <span class="badge">~416 MB</span></h3>
+            <p class="step__desc">
+              O modelo de IA não está incluso no repositório por ser muito grande.
+              Baixe o arquivo <code>model.safetensors</code> e cole dentro da pasta
+              <code>modelo_bert/</code> do projeto.
+            </p>
+            <div class="folder-tree">
+              <pre>VeritaPlugin/
+└── modelo_bert/
+    ├── config.json
+    ├── <span class="highlight-green">model.safetensors</span>   ← colocar aqui
+    ├── tokenizer.json
+    └── tokenizer_config.json</pre>
+            </div>
+            <a href="https://huggingface.co/brunanoroes/veritaplugin-bert/tree/main" target="_blank" rel="noopener" class="btn btn--green btn--sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Baixar modelo no Hugging Face
+            </a>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+          <div class="step__number">3</div>
+          <div class="step__content">
+            <h3 class="step__title">Carregue a extensão no seu navegador</h3>
+            <p class="step__desc">
+              Todos os navegadores baseados em Chromium suportam extensões não empacotadas.
+              Escolha o seu:
+            </p>
+
+            <div class="browser-tabs">
+              <div class="browser-tabs__nav">
+                <button class="tab-btn active" data-tab="chrome">
+                  <img src="assets/browsers/chrome.svg" alt="Chrome" onerror="this.style.display='none'" />
+                  Chrome
+                </button>
+                <button class="tab-btn" data-tab="edge">
+                  <img src="assets/browsers/edge.svg" alt="Edge" onerror="this.style.display='none'" />
+                  Edge
+                </button>
+                <button class="tab-btn" data-tab="brave">
+                  <img src="assets/browsers/brave.svg" alt="Brave" onerror="this.style.display='none'" />
+                  Brave
+                </button>
+                <button class="tab-btn" data-tab="opera">
+                  <img src="assets/browsers/opera.svg" alt="Opera" onerror="this.style.display='none'" />
+                  Opera
+                </button>
+              </div>
+
+              <div class="tab-panel active" id="tab-chrome">
+                <ol class="browser-steps">
+                  <li>Abra o Chrome e acesse <span class="url-pill" data-copy="chrome://extensions/">chrome://extensions/</span></li>
+                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
+                  <li>Clique em <strong>Carregar sem compactação</strong></li>
+                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                </ol>
+              </div>
+
+              <div class="tab-panel" id="tab-edge">
+                <ol class="browser-steps">
+                  <li>Abra o Edge e acesse <span class="url-pill" data-copy="edge://extensions/">edge://extensions/</span></li>
+                  <li>Ative o <strong>Modo do desenvolvedor</strong> (menu lateral esquerdo)</li>
+                  <li>Clique em <strong>Carregar sem compactação</strong></li>
+                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                </ol>
+              </div>
+
+              <div class="tab-panel" id="tab-brave">
+                <ol class="browser-steps">
+                  <li>Abra o Brave e acesse <span class="url-pill" data-copy="brave://extensions/">brave://extensions/</span></li>
+                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
+                  <li>Clique em <strong>Carregar sem compactação</strong></li>
+                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                </ol>
+              </div>
+
+              <div class="tab-panel" id="tab-opera">
+                <ol class="browser-steps">
+                  <li>Abra o Opera e acesse <span class="url-pill" data-copy="opera://extensions/">opera://extensions/</span></li>
+                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
+                  <li>Clique em <strong>Carregar sem compactação</strong></li>
+                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="tip">
+              <span class="tip__icon">✨</span>
+              Após carregar a extensão, um <strong>assistente de configuração</strong> abrirá automaticamente
+              e te guiará pelo restante da instalação.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SOBRE ═══════════════════════════ -->
+  <section class="section section--alt" id="sobre">
+    <div class="container about">
+      <div class="about__logo">
+        <img src="assets/icon.png" alt="VeritaPlugin" />
+      </div>
+      <div class="about__text">
+        <h2><span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span></h2>
+        <p>
+          Extensão do Chrome para detecção de golpes digitais no Facebook,
+          desenvolvida como Trabalho de Conclusão de Curso (TCC).
+          Combina um modelo <strong>BERTimbau</strong> treinado para classificação de golpes
+          com um <strong>pipeline RAG jurídico</strong> para fornecer análises fundamentadas em lei.
+        </p>
+        <p class="about__authors">
+          Desenvolvido por <strong>Bruna Norões</strong> &amp; <strong>Bianca Monsores da Silva Rocha</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">
+        <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
+        · TCC 2025
+      </span>
+      <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="footer__link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
