@@ -17,11 +17,12 @@
     <div class="container navbar__inner">
       <a href="#hero" class="navbar__brand">
         <img src="assets/icon.png" alt="VeritaPlugin logo" class="navbar__logo" />
-        <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
+        <span><span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span></span>
       </a>
       <nav class="navbar__links">
         <a href="#como-funciona">Como funciona</a>
         <a href="#categorias">O que detecta</a>
+        <a href="#repositorios">Repositórios</a>
         <a href="#instalacao">Instalação</a>
         <a href="#sobre">Sobre</a>
       </nav>
@@ -62,6 +63,56 @@
     <div class="hero__gradient"></div>
   </section>
 
+  <!-- ═══════════════════════ REPOSITÓRIOS ═══════════════════════ -->
+  <section class="section section--repos" id="repositorios">
+    <div class="container">
+      <p class="repos__eyebrow">Código aberto · Trabalho de Conclusão de Curso</p>
+      <h2 class="section__title">Repositórios do projeto</h2>
+      <p class="section__sub">Todo o código e o modelo de IA estão disponíveis publicamente</p>
+      <div class="repo-cards">
+
+        <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card__header">
+            <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span class="repo-card__platform">GitHub</span>
+            <span class="repo-card__arrow">↗</span>
+          </div>
+          <h3 class="repo-card__name">brunanoroes / VeritaPlugin</h3>
+          <p class="repo-card__desc">
+            Código-fonte completo da extensão Chrome e da API backend —
+            servidor FastAPI, pipeline RAG jurídico e integração com OpenAI GPT-4o.
+          </p>
+          <div class="repo-card__tags">
+            <span class="repo-tag">Python</span>
+            <span class="repo-tag">FastAPI</span>
+            <span class="repo-tag">Chrome Extension</span>
+            <span class="repo-tag">RAG</span>
+          </div>
+        </a>
+
+        <a href="https://huggingface.co/brunanoroes/veritaplugin-bert/tree/main" target="_blank" rel="noopener" class="repo-card repo-card--hf">
+          <div class="repo-card__header">
+            <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5zm0 2a8.5 8.5 0 110 17 8.5 8.5 0 010-17zm-2.5 5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm5 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm-6.2 5.3c-.2.2-.2.5 0 .7C9.2 15.4 10.6 16 12 16s2.8-.6 3.7-1.5c.2-.2.2-.5 0-.7-.2-.2-.5-.2-.7 0C14.3 14.5 13.2 15 12 15s-2.3-.5-3-1.2c-.2-.2-.5-.2-.7 0z"/></svg>
+            <span class="repo-card__platform">Hugging Face</span>
+            <span class="repo-card__arrow">↗</span>
+          </div>
+          <h3 class="repo-card__name">brunanoroes / veritaplugin-bert</h3>
+          <p class="repo-card__desc">
+            Modelo BERTimbau treinado para classificação de golpes digitais em português —
+            fine-tuned em 6 categorias de fraude com dataset próprio.
+          </p>
+          <div class="repo-card__tags">
+            <span class="repo-tag">BERTimbau</span>
+            <span class="repo-tag">PyTorch</span>
+            <span class="repo-tag">NLP</span>
+            <span class="repo-tag">Português</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════════ COMO FUNCIONA ══════════════════════════ -->
   <section class="section" id="como-funciona">
     <div class="container">
@@ -85,7 +136,7 @@
         <div class="flow__arrow">→</div>
         <div class="flow__step">
           <div class="flow__icon">⚖️</div>
-          <div class="flow__label">RAG jurídico<br />consulta as leis</div>
+          <div class="flow__label">GPT-4o gera<br />explicação, leis<br />e ações</div>
         </div>
         <div class="flow__arrow">→</div>
         <div class="flow__step">
@@ -150,13 +201,48 @@
           <div class="step__content">
             <h3 class="step__title">Baixe o projeto</h3>
             <p class="step__desc">
-              Acesse o repositório no GitHub e baixe o projeto como ZIP ou clone pelo terminal.
-              Extraia em uma pasta que você vá lembrar.
+              Primeiro você precisa baixar os arquivos do plugin para o seu computador.
+              Clique no botão abaixo, aguarde o download terminar e depois
+              <strong>extraia a pasta ZIP</strong> normalmente (botão direito → "Extrair aqui").
+              Guarde bem onde você salvou — você vai precisar dessa pasta logo mais.
             </p>
-            <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              Abrir no GitHub
-            </a>
+
+            <div class="download-options">
+              <!-- OPÇÃO FÁCIL -->
+              <div class="dl-card dl-card--recommended">
+                <div class="dl-card__header">
+                  <span class="dl-card__tag">Recomendado</span>
+                  <span class="dl-card__who">Usuário iniciante</span>
+                </div>
+                <div class="dl-card__icon">📦</div>
+                <h4 class="dl-card__title">Download ZIP</h4>
+                <p class="dl-card__desc">Baixa o projeto pronto como um arquivo compactado. Só extrair e usar.</p>
+                <a href="https://github.com/brunanoroes/VeritaPlugin/archive/refs/heads/main.zip"
+                   class="btn btn--primary btn--sm dl-card__btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Baixar ZIP
+                </a>
+              </div>
+
+              <div class="dl-divider">ou</div>
+
+              <!-- OPÇÃO GIT -->
+              <div class="dl-card">
+                <div class="dl-card__header">
+                  <span class="dl-card__tag dl-card__tag--alt">Avançado</span>
+                  <span class="dl-card__who">Usuário técnico</span>
+                </div>
+                <div class="dl-card__icon">💻</div>
+                <h4 class="dl-card__title">Clonar com Git</h4>
+                <p class="dl-card__desc">Ideal se você já tem o Git instalado e prefere usar o terminal.</p>
+                <div class="code-block">
+                  <code id="clone-cmd">git clone https://github.com/brunanoroes/VeritaPlugin.git</code>
+                  <button class="copy-btn" data-target="clone-cmd" title="Copiar comando">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -166,9 +252,10 @@
           <div class="step__content">
             <h3 class="step__title">Baixe o modelo BERTimbau <span class="badge">~416 MB</span></h3>
             <p class="step__desc">
-              O modelo de IA não está incluso no repositório por ser muito grande.
-              Baixe o arquivo <code>model.safetensors</code> e cole dentro da pasta
-              <code>modelo_bert/</code> do projeto.
+              O plugin usa uma inteligência artificial para detectar golpes. O arquivo dela
+              é grande demais para vir junto com o projeto, então você precisa baixá-lo separado.
+              Após baixar, <strong>cole o arquivo <code>model.safetensors</code> dentro da pasta
+              <code>modelo_bert</code></strong> que está dentro da pasta que você baixou no Passo 1.
             </p>
             <div class="folder-tree">
               <pre>VeritaPlugin/
@@ -191,8 +278,8 @@
           <div class="step__content">
             <h3 class="step__title">Carregue a extensão no seu navegador</h3>
             <p class="step__desc">
-              Todos os navegadores baseados em Chromium suportam extensões não empacotadas.
-              Escolha o seu:
+              Agora é hora de instalar o plugin no seu navegador. Não precisa comprar nem pagar nada —
+              é só carregar a pasta que você baixou. Selecione o navegador que você usa:
             </p>
 
             <div class="browser-tabs">
@@ -217,45 +304,46 @@
 
               <div class="tab-panel active" id="tab-chrome">
                 <ol class="browser-steps">
-                  <li>Abra o Chrome e acesse <span class="url-pill" data-copy="chrome://extensions/">chrome://extensions/</span></li>
-                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
-                  <li>Clique em <strong>Carregar sem compactação</strong></li>
-                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                  <li>Abra o Chrome e na barra de endereços (onde você digita sites) cole o endereço abaixo e pressione <strong>Enter</strong>: <span class="url-pill" data-copy="chrome://extensions/">chrome://extensions/</span></li>
+                  <li>No canto superior direito da tela que abriu, ative a chave <strong>"Modo do desenvolvedor"</strong></li>
+                  <li>Vai aparecer um botão <strong>"Carregar sem compactação"</strong> — clique nele</li>
+                  <li>Uma janela de arquivos vai abrir. Navegue até a pasta que você baixou no Passo 1 e selecione a pasta chamada <code>verita-plugin</code></li>
                 </ol>
               </div>
 
               <div class="tab-panel" id="tab-edge">
                 <ol class="browser-steps">
-                  <li>Abra o Edge e acesse <span class="url-pill" data-copy="edge://extensions/">edge://extensions/</span></li>
-                  <li>Ative o <strong>Modo do desenvolvedor</strong> (menu lateral esquerdo)</li>
-                  <li>Clique em <strong>Carregar sem compactação</strong></li>
-                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                  <li>Abra o Edge e na barra de endereços cole o endereço abaixo e pressione <strong>Enter</strong>: <span class="url-pill" data-copy="edge://extensions/">edge://extensions/</span></li>
+                  <li>No menu do lado esquerdo, ative a chave <strong>"Modo do desenvolvedor"</strong></li>
+                  <li>Vai aparecer um botão <strong>"Carregar sem compactação"</strong> — clique nele</li>
+                  <li>Uma janela de arquivos vai abrir. Navegue até a pasta que você baixou no Passo 1 e selecione a pasta chamada <code>verita-plugin</code></li>
                 </ol>
               </div>
 
               <div class="tab-panel" id="tab-brave">
                 <ol class="browser-steps">
-                  <li>Abra o Brave e acesse <span class="url-pill" data-copy="brave://extensions/">brave://extensions/</span></li>
-                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
-                  <li>Clique em <strong>Carregar sem compactação</strong></li>
-                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                  <li>Abra o Brave e na barra de endereços cole o endereço abaixo e pressione <strong>Enter</strong>: <span class="url-pill" data-copy="brave://extensions/">brave://extensions/</span></li>
+                  <li>No canto superior direito da tela que abriu, ative a chave <strong>"Modo do desenvolvedor"</strong></li>
+                  <li>Vai aparecer um botão <strong>"Carregar sem compactação"</strong> — clique nele</li>
+                  <li>Uma janela de arquivos vai abrir. Navegue até a pasta que você baixou no Passo 1 e selecione a pasta chamada <code>verita-plugin</code></li>
                 </ol>
               </div>
 
               <div class="tab-panel" id="tab-opera">
                 <ol class="browser-steps">
-                  <li>Abra o Opera e acesse <span class="url-pill" data-copy="opera://extensions/">opera://extensions/</span></li>
-                  <li>Ative o <strong>Modo do desenvolvedor</strong> (canto superior direito)</li>
-                  <li>Clique em <strong>Carregar sem compactação</strong></li>
-                  <li>Selecione a pasta <code>verita-plugin/</code> dentro do projeto baixado</li>
+                  <li>Abra o Opera e na barra de endereços cole o endereço abaixo e pressione <strong>Enter</strong>: <span class="url-pill" data-copy="opera://extensions/">opera://extensions/</span></li>
+                  <li>No canto superior direito da tela que abriu, ative a chave <strong>"Modo do desenvolvedor"</strong></li>
+                  <li>Vai aparecer um botão <strong>"Carregar sem compactação"</strong> — clique nele</li>
+                  <li>Uma janela de arquivos vai abrir. Navegue até a pasta que você baixou no Passo 1 e selecione a pasta chamada <code>verita-plugin</code></li>
                 </ol>
               </div>
             </div>
 
             <div class="tip">
-              <span class="tip__icon">✨</span>
-              Após carregar a extensão, um <strong>assistente de configuração</strong> abrirá automaticamente
-              e te guiará pelo restante da instalação.
+              <span class="tip__icon">🎉</span>
+              Pronto! Assim que a extensão carregar, um <strong>assistente de configuração</strong>
+              vai abrir automaticamente e te guiar por tudo que falta, passo a passo.
+              Você não precisa se preocupar com mais nada agora!
             </div>
           </div>
         </div>

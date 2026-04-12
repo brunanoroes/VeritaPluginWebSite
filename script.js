@@ -32,6 +32,23 @@ document.querySelectorAll('.url-pill').forEach(pill => {
   });
 });
 
+// ── Code-block copy button ─────────────────────
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.dataset.target;
+    const text = document.getElementById(targetId)?.textContent ?? '';
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      const svgOriginal = btn.innerHTML;
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(() => {
+        btn.innerHTML = svgOriginal;
+        btn.classList.remove('copied');
+      }, 1800);
+    });
+  });
+});
+
 // ── Hamburger menu ─────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.querySelector('.navbar__links');
