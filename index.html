@@ -20,11 +20,11 @@
         <span><span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span></span>
       </a>
       <nav class="navbar__links">
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#categorias">O que detecta</a>
-        <a href="#repositorios">Repositórios</a>
-        <a href="#instalacao">Instalação</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#repositorios">Repositórios <span class="nav-chevron">›</span></a>
+        <a href="#como-funciona">Como funciona <span class="nav-chevron">›</span></a>
+        <a href="#categorias">O que detecta <span class="nav-chevron">›</span></a>
+        <a href="#instalacao">Instalação <span class="nav-chevron">›</span></a>
+        <a href="#sobre">Sobre <span class="nav-chevron">›</span></a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -36,7 +36,7 @@
   <section class="hero" id="hero">
     <div class="container hero__inner">
       <div class="hero__text">
-        <p class="hero__badge">Extensão do Chrome · TCC 2026</p>
+        <p class="hero__badge">Extensão de Navegador · TCC 2026.1</p>
         <h1 class="hero__title">
           Detecte golpes no Facebook<br />
           <span class="highlight-green">antes</span> que te enganem
@@ -46,6 +46,14 @@
           usa inteligência artificial para analisar publicações suspeitas e te alertar
           com explicação, base legal e ações recomendadas em segundos.
         </p>
+        <div class="hero__tech-tags">
+          <span class="hero-tag hero-tag--bert">BERTimbau</span>
+          <span class="hero-tag hero-tag--gpt">GPT-4o</span>
+          <span class="hero-tag hero-tag--rag">RAG Jurídico</span>
+          <span class="hero-tag hero-tag--api">FastAPI</span>
+          <span class="hero-tag hero-tag--py">Python</span>
+          <span class="hero-tag hero-tag--ext">Extensão de Navegador</span>
+        </div>
         <div class="hero__ctas">
           <a href="assets/VeritaPlugin-Extensao.zip" download class="btn btn--primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -68,11 +76,8 @@
     <div class="container disclaimer-banner__inner">
       <div class="disclaimer-banner__icon">🔬</div>
       <div class="disclaimer-banner__text">
-        <strong>Projeto de pesquisa acadêmica — TCC 2026</strong>
-        O <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
-        foi desenvolvido para fins de estudo e pode cometer erros.
-        As análises são geradas por inteligência artificial e <strong>não substituem</strong>
-        orientação jurídica profissional. Sempre verifique informações importantes por conta própria.
+        <strong class="disclaimer-banner__title">Projeto de pesquisa acadêmica — TCC 2026.1</strong>
+        O <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span> foi desenvolvido para fins de estudo e pode cometer erros. As análises são geradas por inteligência artificial e <em>não substituem</em> orientação jurídica profissional. Sempre verifique informações importantes por conta própria.
       </div>
     </div>
   </div>
@@ -82,9 +87,10 @@
     <div class="container">
       <p class="repos__eyebrow">Código aberto · Para quem quer explorar por dentro</p>
       <h2 class="section__title">Repositórios do projeto</h2>
-      <p class="section__sub">Curioso sobre como o VeritaPlugin funciona? Todo o código está disponível publicamente</p>
+      <p class="section__sub">Curioso sobre como o VeritaPlugin funciona? Todo o código e os dados estão disponíveis publicamente</p>
       <div class="repo-cards">
 
+        <!-- Plugin principal -->
         <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="repo-card">
           <div class="repo-card__header">
             <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -104,6 +110,7 @@
           </div>
         </a>
 
+        <!-- Modelo no Hugging Face -->
         <a href="https://huggingface.co/brunanoroes/veritaplugin-bert/tree/main" target="_blank" rel="noopener" class="repo-card repo-card--hf">
           <div class="repo-card__header">
             <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5zm0 2a8.5 8.5 0 110 17 8.5 8.5 0 010-17zm-2.5 5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm5 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm-6.2 5.3c-.2.2-.2.5 0 .7C9.2 15.4 10.6 16 12 16s2.8-.6 3.7-1.5c.2-.2.2-.5 0-.7-.2-.2-.5-.2-.7 0C14.3 14.5 13.2 15 12 15s-2.3-.5-3-1.2c-.2-.2-.5-.2-.7 0z"/></svg>
@@ -123,7 +130,189 @@
           </div>
         </a>
 
+        <!-- Treinamento BERTimbau -->
+        <a href="https://github.com/brunanoroes/treinamento-BERTimbau" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card__header">
+            <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span class="repo-card__platform">GitHub</span>
+            <span class="repo-card__arrow">↗</span>
+          </div>
+          <h3 class="repo-card__name">brunanoroes / treinamento-BERTimbau</h3>
+          <p class="repo-card__desc">
+            Código completo do processo de fine-tuning do BERTimbau —
+            pré-processamento, treinamento, avaliação e métricas do modelo final.
+          </p>
+          <div class="repo-card__tags">
+            <span class="repo-tag">Fine-tuning</span>
+            <span class="repo-tag">Transformers</span>
+            <span class="repo-tag">Python</span>
+            <span class="repo-tag">Google Colab</span>
+          </div>
+        </a>
+
+        <!-- Evolução do RAG -->
+        <a href="https://github.com/brunanoroes/evolucao-prompt-RAG" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card__header">
+            <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span class="repo-card__platform">GitHub</span>
+            <span class="repo-card__arrow">↗</span>
+          </div>
+          <h3 class="repo-card__name">brunanoroes / evolucao-prompt-RAG</h3>
+          <p class="repo-card__desc">
+            Registro das 3 versões do pipeline RAG — prompts, resultados comparativos
+            e os datasets gerados em cada iteração até chegar à versão atual.
+          </p>
+          <div class="repo-card__tags">
+            <span class="repo-tag">RAG</span>
+            <span class="repo-tag">Prompt Engineering</span>
+            <span class="repo-tag">GPT-4o</span>
+            <span class="repo-tag">Iterativo</span>
+          </div>
+        </a>
+
+        <!-- Dataset Kaggle -->
+        <a href="https://www.kaggle.com/datasets/brunaassisgt/brscamsfacebook" target="_blank" rel="noopener" class="repo-card repo-card--kaggle">
+          <div class="repo-card__header">
+            <svg class="repo-card__platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
+            <span class="repo-card__platform">Kaggle</span>
+            <span class="repo-card__arrow">↗</span>
+          </div>
+          <h3 class="repo-card__name">brunaassisgt / BRScamsFacebook</h3>
+          <p class="repo-card__desc">
+            Dataset criado do zero com publicações do Facebook em português —
+            rotulado em 6 categorias de golpe e utilizado no treinamento do BERTimbau.
+          </p>
+          <div class="repo-card__tags">
+            <span class="repo-tag">Dataset</span>
+            <span class="repo-tag">Português</span>
+            <span class="repo-tag">Facebook</span>
+            <span class="repo-tag">6 categorias</span>
+          </div>
+        </a>
+
       </div>
+
+      <!-- ── Construção do Dataset ── -->
+      <div class="dataset-section">
+        <div class="dataset-section__header">
+          <div class="dataset-section__line"></div>
+          <div class="dataset-section__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            Construção do Dataset
+          </div>
+          <div class="dataset-section__line"></div>
+        </div>
+
+        <p class="dataset-section__desc">
+          O dataset final é composto por dados internos coletados manualmente e seis fontes externas,
+          cada uma com seu próprio pipeline de extração, tradução e tratamento.
+        </p>
+
+        <div class="source-cards">
+
+          <!-- Interno -->
+          <div class="source-card source-card--internal">
+            <div class="source-card__top">
+              <span class="source-badge source-badge--internal">Interno</span>
+              <span class="source-card__name">Dataset próprio</span>
+            </div>
+            <p class="source-card__desc">Posts, comentários e anúncios reais do Facebook coletados manualmente. Subcategorias com baixa incidência foram agrupadas em categorias mais amplas na análise exploratória.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">Coleta manual</span>
+              <span class="repo-tag">Facebook</span>
+            </div>
+          </div>
+
+          <!-- Ext 1/5/7 ScamWarners -->
+          <a href="https://github.com/brunanoroes/scraping-scamwarners" target="_blank" rel="noopener" class="source-card">
+            <div class="source-card__top">
+              <span class="source-badge">Ext. 1, 5, 7</span>
+              <span class="source-card__name">ScamWarners</span>
+              <span class="source-card__arrow">↗</span>
+            </div>
+            <p class="source-card__desc">Dados extraídos via web scraping com <strong>cloudscraper</strong>. Textos traduzidos do inglês para o português via <strong>deep-translator</strong>.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">cloudscraper</span>
+              <span class="repo-tag">deep-translator</span>
+              <span class="repo-tag">Web Scraping</span>
+            </div>
+          </a>
+
+          <!-- Ext 2 SMS Spam -->
+          <a href="https://github.com/brunanoroes/tradutor-dataset-phishing" target="_blank" rel="noopener" class="source-card">
+            <div class="source-card__top">
+              <span class="source-badge">Ext. 2</span>
+              <span class="source-card__name">SMS Spam Collection</span>
+              <span class="source-card__arrow">↗</span>
+            </div>
+            <p class="source-card__desc">Mensagens spam/ham originalmente em inglês, traduzidas para o português com ferramenta própria de tradução em lote.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">deep-translator</span>
+              <span class="repo-tag">Phishing</span>
+            </div>
+          </a>
+
+          <!-- Ext 3 Fake News -->
+          <div class="source-card">
+            <div class="source-card__top">
+              <span class="source-badge">Ext. 3</span>
+              <span class="source-card__name">Fake News Portuguese</span>
+            </div>
+            <p class="source-card__desc">~20.000 registros de notícias falsas já em português. Amostragem priorizando exemplos de desinformação digital.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">pandas</span>
+              <span class="repo-tag">Desinformação</span>
+            </div>
+          </div>
+
+          <!-- Ext 4 sec-fraudimabr -->
+          <a href="https://github.com/brunanoroes/extrator-dataset-processed_texts" target="_blank" rel="noopener" class="source-card">
+            <div class="source-card__top">
+              <span class="source-badge">Ext. 4</span>
+              <span class="source-card__name">sec-fraudimabr</span>
+              <span class="source-card__arrow">↗</span>
+            </div>
+            <p class="source-card__desc">Mensagens de WhatsApp e Telegram rotuladas, lidas via <strong>pickle.load()</strong> e exportadas para <strong>.xlsx</strong> com openpyxl.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">pickle</span>
+              <span class="repo-tag">openpyxl</span>
+              <span class="repo-tag">WhatsApp / Telegram</span>
+            </div>
+          </a>
+
+          <!-- Ext 6 Fake Reviews -->
+          <a href="https://github.com/brunanoroes/tratamento-dados-golpes-lojas-falsas" target="_blank" rel="noopener" class="source-card">
+            <div class="source-card__top">
+              <span class="source-badge">Ext. 6</span>
+              <span class="source-card__name">Fake Reviews Dataset</span>
+              <span class="source-card__arrow">↗</span>
+            </div>
+            <p class="source-card__desc">~40.000 avaliações de produtos reais e geradas por computador. Amostra traduzida para o português e adaptada para lojas falsas.</p>
+            <div class="source-card__tags">
+              <span class="repo-tag">deep-translator</span>
+              <span class="repo-tag">pandas</span>
+              <span class="repo-tag">Lojas Falsas</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Stack tecnológico -->
+        <div class="tech-stack">
+          <span class="tech-stack__label">Tecnologias utilizadas na construção:</span>
+          <div class="tech-stack__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">pandas</span>
+            <span class="tech-tag">cloudscraper</span>
+            <span class="tech-tag">deep-translator</span>
+            <span class="tech-tag">BeautifulSoup</span>
+            <span class="tech-tag">pickle</span>
+            <span class="tech-tag">openpyxl</span>
+            <span class="tech-tag">Google Colab</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -372,7 +561,7 @@
         <h2><span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span></h2>
         <p>
           Extensão do Chrome para detecção de golpes digitais no Facebook,
-          desenvolvida como Trabalho de Conclusão de Curso (TCC 2026).
+          desenvolvida como Trabalho de Conclusão de Curso (TCC 2026.1).
           Combina um modelo <strong>BERTimbau</strong> treinado para classificação de golpes
           com um <strong>pipeline RAG jurídico + GPT-4o</strong> para gerar explicações,
           bases legais e ações recomendadas.
@@ -382,9 +571,6 @@
           e podem conter erros. Não tome decisões jurídicas ou financeiras baseadas exclusivamente
           nos resultados do plugin.
         </p>
-        <p class="about__authors">
-          Desenvolvido por <strong>Bruna Norões</strong> &amp; <strong>Bianca Monsores da Silva Rocha</strong>
-        </p>
       </div>
     </div>
   </section>
@@ -392,10 +578,16 @@
   <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__brand">
-        <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
-        · TCC 2026
-      </span>
+      <div class="footer__left">
+        <span class="footer__brand">
+          <span class="brand-verita">Verita</span><span class="brand-plugin">Plugin</span>
+          · TCC 2026.1
+        </span>
+        <span class="footer__uni">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Bruna Norões &amp; Bianca Monsores · UFF — Sistemas de Informação
+        </span>
+      </div>
       <a href="https://github.com/brunanoroes/VeritaPlugin" target="_blank" rel="noopener" class="footer__link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         GitHub

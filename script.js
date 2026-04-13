@@ -2,6 +2,68 @@
    VeritaPlugin — Landing Page Script
    ═══════════════════════════════════════════════ */
 
+// ── Mobile menu ────────────────────────────────
+const hamburger  = document.getElementById('hamburger');
+const navLinks   = document.querySelector('.navbar__links');
+const navbar     = document.querySelector('.navbar');
+
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
+
+function openMenu() {
+  navLinks.classList.add('open');
+  hamburger.classList.add('open');
+  overlay.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  overlay.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+overlay.addEventListener('click', closeMenu);
+
+// Close on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+// Close on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMenu();
+});
+
+// ── Navbar scroll shadow ───────────────────────
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ── Active nav link on scroll ──────────────────
+const sections = document.querySelectorAll('section[id], div[id]');
+const navAnchors = document.querySelectorAll('.navbar__links a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+      });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+
+sections.forEach(s => sectionObserver.observe(s));
+
 // ── Browser tabs ──────────────────────────────
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -49,54 +111,36 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
   });
 });
 
-// ── Hamburger menu ─────────────────────────────
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.querySelector('.navbar__links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-// Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-// ── Scroll-reveal (simple IntersectionObserver) ─
+// ── Scroll-reveal ──────────────────────────────
 const revealEls = document.querySelectorAll(
-  '.flow__step, .card, .step, .about'
+  '.flow__step, .card, .step, .about, .repo-card'
 );
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
 
 revealEls.forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
-  observer.observe(el);
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity 0.45s ease ${(i % 6) * 0.07}s, transform 0.45s ease ${(i % 6) * 0.07}s`;
+  revealObserver.observe(el);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  // trigger already-visible elements
+// Reveal already-visible elements on load
+window.addEventListener('load', () => {
   revealEls.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      el.classList.add('revealed');
-    }
+    if (rect.top < window.innerHeight) el.classList.add('revealed');
   });
 });
 
-// inject .revealed styles dynamically
+// Inject revealed style
 const style = document.createElement('style');
 style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(style);
