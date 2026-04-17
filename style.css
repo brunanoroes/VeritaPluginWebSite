@@ -62,11 +62,19 @@ code {
   position: sticky;
   top: 0;
   z-index: 200;
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(13, 17, 23, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  transition: box-shadow 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .navbar.scrolled {
@@ -1384,7 +1392,9 @@ a.source-card:hover .source-card__arrow {
 
   /* hide desktop links */
   .navbar__links {
-    display: none;
+    display: flex;
+    visibility: hidden;
+    pointer-events: none;
     position: fixed;
     top: 64px;
     left: 0;
@@ -1399,13 +1409,15 @@ a.source-card:hover .source-card__arrow {
     overflow-y: auto;
     transform: translateY(-8px);
     opacity: 0;
-    transition: opacity 0.22s ease, transform 0.22s ease;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0.22s;
   }
 
   .navbar__links.open {
-    display: flex;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
     opacity: 1;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0s;
   }
 
   .navbar__links a {
